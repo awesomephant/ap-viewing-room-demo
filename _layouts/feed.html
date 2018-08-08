@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+<header class="vr-feed-banner"></header>
+
+<section class="feed-intro">
+    <date class='feed-date'>September 2018</date>
+    <p class="vr-copy">
+        This is some copy on the artist/group of artists being featured this month. Ideally something that's not just a bio, maybe like 150 words? Presumably this is connected to an exhibition?
+    </p>
+</section>
+
+<ul class="vr-feed">
+    {% for item in site.data.items %}
+    <li class="vr-item">
+        <div class="item-image"></div>
+        <div class="item-meta">
+        <section>
+            <h2 class="item-title">{{ item.title }}</h2>
+            <span class="item-price">£1,800</span>
+        </section>
+        {% if item.sold %}
+        <a href="detail.html" class="btn-sold">Sold</a>
+        {% else %}
+        <a href="detail.html" class="btn">Available</a>
+        {% endif %}
+        </div>
+    </li>
+    {% endfor %}
+</ul>

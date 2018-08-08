@@ -1,0 +1,43 @@
+.detail-banner {
+    height: calc(100vh - #{$headerHeight});
+    display: grid;
+    grid-template-columns: 1fr 15rem;
+    align-items: end;
+}
+
+.detail-slider {
+    height: calc(100vh - #{$headerHeight});
+    background: lighten($lightgray, 10);
+    padding: 1rem;
+    text-align: center;
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        display: inline-block;
+    }
+}
+
+.detail-meta {
+    padding: 2rem;
+    h2 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 2em;
+        span {
+            display: block;
+            font-weight: normal;
+        }
+    }
+}
+.meta-item {
+    list-style: none;
+    margin-bottom: 1em;
+    span {
+        color: $gray;
+        display: block;
+    }
+}
+
+.vr-detail {
+    padding: 5%;
+}

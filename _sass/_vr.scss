@@ -1,0 +1,115 @@
+$lightgray: rgb(211,210,210);
+$gray: rgb(142,140,136);
+$black: rgb(8,5,7);
+
+$fast: 320ms;
+$headerHeight: 3rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Brown", sans-serif;
+    color: $black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.vr {
+    padding: 5%;
+}
+
+.site-header, .site-footer {
+    text-align: center;
+    color: $gray;
+    padding: 1rem;
+}
+
+.site-header {
+    height: $headerHeight;
+}
+
+.site-content {
+    min-height: 100vh;
+}
+
+.vr-copy {
+    font-size: 1.4rem;
+    max-width: 36rem;
+    margin-bottom: 2em;
+}
+
+.vr-note {
+    font-size: 1rem;
+    max-width: 24rem;
+}
+
+.vr-signup {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid $lightgray;
+    border-radius: 2px;
+    max-width: 30rem;
+    overflow: hidden;
+    margin-bottom: 10em;
+    .btn {
+        border: 0;
+        border-left: 1px solid $lightgray;
+        
+    }
+}
+
+.btn {
+    display: inline-block;
+    color: $gray;
+    border: 1px solid $lightgray;
+    font-size: 1.2rem;
+    transition: $fast;
+    padding: 1rem 1.5rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.btn-sold {
+    @extend .btn;
+    border: none;
+    padding: 0;
+    text-align: right;
+    &:before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: -.1em;
+        width: .5em;
+        height: .5em;
+        margin-right: .5em;
+        background: orangered;
+        border-radius: 100%;
+    }
+}
+
+input {
+    display: block;
+    border: 0;
+    padding: 1rem;
+    font-size: 1.4rem;
+    &:focus {
+        outline: none;
+        box-shadow: 0;
+    }
+    &:valid + .btn {
+        color: $black;
+    }
+}
+
+label {
+    font-size: 0;
+    color: $gray;
+    margin-bottom: .5em;
+}

@@ -1,0 +1,52 @@
+.feed-date {
+    margin-bottom: 3em;
+    display: block;
+}
+.feed-intro {
+    padding: 2rem;
+}
+
+.vr-feed {
+    display: grid;
+    width: 100%;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+}
+.vr-item {
+    grid-area: auto / auto / auto / span 1;
+    list-style: none;
+    margin-bottom: 6rem;
+    &:first-of-type {
+        grid-area: auto / auto / auto / span 2;
+        .item-image {
+            height: 90vh;
+        }
+    }
+}
+.item-image {
+    height: 40vh;
+    width: 100%;
+    background: $lightgray;
+    margin-bottom: 1rem;
+}
+
+.item-meta {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    section {
+        flex-basis: 70%;
+    }
+}
+
+.item-title {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.item-price {
+    font-size: 1.2rem;
+    color: $gray;
+}

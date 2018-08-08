@@ -1,0 +1,70 @@
+.vr-flow {
+    position: relative;
+    top: -$headerHeight;
+    height: calc(100vh);
+}
+
+.flow-close {
+    position: absolute;
+    top: 2rem;
+    display: block;
+    z-index: 200;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    svg {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.flow-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $lightgray;
+    padding: 5%;
+    z-index: 0;
+    h3 {
+        margin-bottom: 3rem;
+        font-weight: normal;
+
+    }
+    &.active {
+        z-index: 100;
+    }
+    label {
+        display: block;
+        margin-bottom: .5rem;
+    }
+    input {
+        border: 0;
+        padding: 0;
+        padding-bottom: .2rem;
+        margin-bottom: 2em;
+        background: transparent;
+        border-bottom: 1px solid $gray;
+    }
+    label {
+        color: $gray;
+        font-size: .9rem;
+    }
+    .btn {
+        border-color: $gray;
+    }
+    h1 {
+        font-weight: normal;
+    }
+}
+
+.checkbox {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: flex-end;
+    label {
+        padding-left: 1rem;
+    }
+}

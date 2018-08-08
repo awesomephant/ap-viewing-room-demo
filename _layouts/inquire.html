@@ -1,0 +1,39 @@
+---
+layout: base
+---
+
+<a href='./detail.html' class="flow-close"><svg viewBox="0 0 24 24">
+        <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+    </svg></a>
+<div class="vr-flow">
+    <section class="flow-screen active">
+        <h3>1/2</h3>
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        
+        <label for="Phone">Phone</label>
+        <input type="number" name="phone" id="phone">
+        <a data-to='flow_preferred' href="#1" class="btn js_flowButton">Next</a>
+    </section>
+    <section class="flow-screen" id='flow_preferred'>
+        <h3>2/2</h3>
+        <p class="vr-copy">
+            How may we contact you?
+        </p>
+        <div class="checkbox">
+            <label for="by_phone">Phone</label>
+            <input type="checkbox" name="by_phone" id="">
+        </div>
+        <div class="checkbox">
+            <label for="by_email">Email</label>
+            <input type="checkbox" name="by_email" id="">
+        </div>
+        <a href="#1" class="btn js_flowButton" data-to='flow_thanks'>Send</a>
+    </section>
+    <section class="flow-screen" id='flow_thanks'>
+        <h1>Thank you. We'll be in touch.</h1>
+    </section>
+</div>
